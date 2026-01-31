@@ -43,5 +43,8 @@ body::before {
 
 }
 
+.user_logo{
+    background-image: url("user.png");
+}
 
 
