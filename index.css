@@ -44,12 +44,6 @@ body::before {
     backdrop-filter: blur(10px);
 }
 
-.wellcome_msg{
-    color: white;
-    font-size: 32px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 
 .user_logo{
     width: 230px;
@@ -63,4 +57,20 @@ body::before {
     backdrop-filter: blur(10px);
 }
 
+
+.username{
+    color: white;
+    font-size: 52px;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.wellcome_msg{
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
