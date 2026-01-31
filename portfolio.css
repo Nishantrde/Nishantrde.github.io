@@ -1,12 +1,12 @@
 body {
-    margin: 0;
+    margin: 20;
     padding: 0;
     position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items:baseline;
     gap: 5px;
 }
 
@@ -25,12 +25,13 @@ body::before {
 }
 
 .terminal{
-    width: 230px;
-    height: 230px;
+    width: 40px;
+    height: 40px;
     background-image: url("terminal.svg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
 }
 
 
