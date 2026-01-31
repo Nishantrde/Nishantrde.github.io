@@ -25,6 +25,7 @@ body::before {
     height: 20px;
     background-color: transparent;
     border-radius: 50%;
-    
+    filter: blur(15px);
+
 }
 
