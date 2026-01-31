@@ -23,3 +23,14 @@ body::before {
     background-position: center;
     z-index: -1;
 }
+
+.terminal{
+    width: 230px;
+    height: 230px;
+    background-image: url("terminal.svg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
