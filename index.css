@@ -3,6 +3,9 @@ body{
     padding: 0;
     position: relative;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -22,10 +25,11 @@ body::before {
 }
 .trans-bnt{
     width: 100px;
-    height: 20px;
-    background-color: transparent;
-    border-radius: 50%;
-    filter: blur(15px);
+    height: 40px;
+    background-color: white;
+    border-radius: 12px;
+    filter: blur(50px);
+    top: 50%;
 
 }
 
