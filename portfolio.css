@@ -46,6 +46,8 @@ body::before {
     border: 1px solid transparent;
     line-height: 1;
     margin: 0;
+    cursor: pointer;
+
 
 }
 
