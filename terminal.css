@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+    gap: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10px;
+    color: aliceblue;
+}
