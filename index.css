@@ -1,8 +1,22 @@
 body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("home_screen.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     filter: blur(8px);
-    /* -webkit-filter: blur(8px); */
 }
+
