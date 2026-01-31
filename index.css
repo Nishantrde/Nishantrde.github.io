@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     position: relative;
@@ -25,7 +25,7 @@ body::before {
     z-index: -1;
 }
 
-.trans-bnt{
+.trans-bnt {
     width: 150px;
     height: 40px;
     background-color: transparent;
@@ -40,12 +40,11 @@ body::before {
     /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); */
 }
 
-.trans-bnt:hover{
+.trans-bnt:hover {
     backdrop-filter: blur(10px);
 }
 
-
-.user_logo{
+.user_logo {
     width: 230px;
     height: 230px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -57,8 +56,7 @@ body::before {
     backdrop-filter: blur(10px);
 }
 
-
-.username{
+.username {
     color: white;
     font-size: 52px;
     font-weight: 400;
@@ -66,11 +64,10 @@ body::before {
 }
 
 
-.wellcome_msg{
+.wellcome_msg {
     color: white;
     font-size: 32px;
     font-weight: 400;
 
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
