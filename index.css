@@ -49,7 +49,7 @@ body::before {
     height: 170px;
     background-image: url("user.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
