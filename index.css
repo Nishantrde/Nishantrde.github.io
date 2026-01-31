@@ -1,4 +1,7 @@
 body{
     background-image: url("home_screen.jpeg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 }
