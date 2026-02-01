@@ -13,14 +13,15 @@
     </h1>
     <div class="cli" id="cmd_ln">
         <span>PS Nishantrde.github.io>&nbsp;</span>
-        <input class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
+        <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
     </div>
-    </h1>
-    </h1>    
     <script type="module">  
         let ter_inp = document.getElementById("terminal-input")
-        console.log(ter_inp)
-
+        ter_inp.addEventListener('keydown', function(event){
+            if (event.key == 'Enter'){
+                console.log(ter_inp.value)
+            }
+        })
     </script>
 </body>
 </html>
