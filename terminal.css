@@ -18,5 +18,16 @@ h1 {
     font-weight: 300;
     /* or use 'normal' for even lighter */
 }
+.cli{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Consolas', 'Courier New', monospace;
+    margin-left: 8px;
+    margin-top: 18px;
+    font-weight: 300;
+    font-size: 18px;
+    color: antiquewhite;
+}
 
 
