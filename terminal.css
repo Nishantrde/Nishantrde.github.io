@@ -18,7 +18,9 @@ h1 {
     font-weight: 300;
     /* or use 'normal' for even lighter */
 }
-.cli{
+
+
+.cli {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,6 +30,26 @@ h1 {
     font-weight: 300;
     font-size: 18px;
     color: antiquewhite;
+}
+
+.cli span {
+    color: antiquewhite;
+    font-size: 18px;
+    font-weight: 300;
+    white-space: pre;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    color: antiquewhite;
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 300;
+    outline: none;
+    margin-left: 4px;
+    padding: 0;
 }
 
 
