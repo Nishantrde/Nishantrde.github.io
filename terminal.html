@@ -19,9 +19,14 @@
         <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
     </div>
     <script type="module">  
+        let cmds = new Set();
+        let cmd_index = cmds.size - 1
         let ter_inp = document.getElementById("terminal-input")
         ter_inp.addEventListener('keydown', function(event){
+
             if (event.key == 'Enter'){
+                
+                cmds.add(ter_inp.value)
                 switch(ter_inp.value){
                     case "ls":
                         console.log("Got It")
@@ -32,9 +37,24 @@
                         const container = document.getElementById('op');
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
+                    finally:
+                        const loc = document.getElementById('loc')
+                        const address = loc.textContent
+                        const container = document.getElementById('op');
+                        container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
+                        
 
                 }
                 ter_inp.value = null
+                cmd_index = cmds.size - 1
+                console.log(cmds, cmd_index)
+            }
+            if (event.key == 'ArrowUp' && cmds.size!=0){
+                let arr = Array.from(cmds)
+                ter_inp.value = arr[cmd_index]
+                if (cmd_index != 0){
+                cmd_index -= 1
+                }
             }
         })
     </script>
