@@ -1,73 +1,73 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="terminal.css">
+    <link rel="stylesheet" href="terminal.css">
     <title>Nishant's Terminal</title>
 </head>
+
 <body>
     <h1>Nishant's PowerShell <br>
         <br>
         Copyright (C) Nishantrde.github.io. All rights reserved.
-        
+
     </h1>
     <div class="cli" id="op">
 
     </div>
     <div class="cli" id="cmd_ln">
         <span id="loc">PS Nishantrde.github.io>&nbsp;</span>
-        <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
+        <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..."
+            autocomplete="off" />
     </div>
-    <script type="module">  
+    <script type="module">
         let cmds = new Set();
         let cmd_index = cmds.size - 1
         let ter_inp = document.getElementById("terminal-input")
 
-        window.addEventListener('click', function() {
+        window.addEventListener('click', function () {
             ter_inp.focus();
         });
 
-        ter_inp.addEventListener('keydown', function(event){
-        const loc = document.getElementById('loc')
-        const address = loc.textContent
-        const container = document.getElementById('op');
-            if (event.key == 'Enter'){
-                if(ter_inp.value != ""){
+        ter_inp.addEventListener('keydown', function (event) {
+            const loc = document.getElementById('loc')
+            const address = loc.textContent
+            const container = document.getElementById('op');
+            if (event.key == 'Enter') {
+                if (ter_inp.value != "") {
                     cmds.add(ter_inp.value)
                 }
-                switch(ter_inp.value){
+                switch (ter_inp.value) {
                     case "ls":
                         console.log("Got It")
                         break;
                     case "whoami":
-                        
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
                     default:
-                        
                         container.insertAdjacentHTML('beforeend', `<div>${address} ${ter_inp.value}</div><div>${ter_inp.value}: command not found</div><br>`);
-                        
-
                 }
                 ter_inp.value = null
                 cmd_index = cmds.size - 1
                 console.log(cmds, cmd_index)
             }
-            if (event.key == 'ArrowUp' && cmds.size!=0){
+            if (event.key == 'ArrowUp' && cmds.size != 0) {
                 let arr = Array.from(cmds)
                 ter_inp.value = arr[cmd_index]
-                if (cmd_index != 0){
-                cmd_index -= 1
+                if (cmd_index != 0) {
+                    cmd_index -= 1
                 }
             }
-            if (event.key == 'ArrowDown' && cmds.size!=0 && cmd_index!=cmds.size){
+            if (event.key == 'ArrowDown' && cmds.size != 0 && cmd_index != cmds.size) {
                 let arr = Array.from(cmds)
                 ter_inp.value = arr[cmd_index]
-                if (cmd_index != cmds.size - 1){
-                cmd_index += 1
+                if (cmd_index != cmds.size - 1) {
+                    cmd_index += 1
                 }
             }
         })
     </script>
 </body>
+
 </html>
