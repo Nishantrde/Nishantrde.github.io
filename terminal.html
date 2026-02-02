@@ -26,7 +26,7 @@
         window.addEventListener('click', function() {
             ter_inp.focus();
         });
-        
+
         ter_inp.addEventListener('keydown', function(event){
         const loc = document.getElementById('loc')
         const address = loc.textContent
@@ -57,6 +57,13 @@
                 ter_inp.value = arr[cmd_index]
                 if (cmd_index != 0){
                 cmd_index -= 1
+                }
+            }
+            if (event.key == 'ArrowDown' && cmds.size!=0 && cmd_index!=cmds.size){
+                let arr = Array.from(cmds)
+                ter_inp.value = arr[cmd_index]
+                if (cmd_index != cmds.size - 1){
+                cmd_index += 1
                 }
             }
         })
