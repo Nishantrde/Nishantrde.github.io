@@ -11,6 +11,9 @@
         Copyright (C) Nishantrde.github.io. All rights reserved. <br>
         
     </h1>
+    <div class="cli" id="op">
+
+    </div>
     <div class="cli" id="cmd_ln">
         <span>PS Nishantrde.github.io>&nbsp;</span>
         <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
@@ -22,11 +25,13 @@
                 switch(ter_inp.value){
                     case "ls":
                         console.log("Got It")
+                        break;
                     case "whoami":
                         const op = document.createElement('span')
-                        op.textContenet = 'Nishant Bhai'
-                        const container = document.getElementById('cmd_ln');
+                        op.textContent = 'Nishant Bhai'
+                        const container = document.getElementById('op');
                         container.appendChild(op)
+                        break;
 
                 }
                 ter_inp.value = null
