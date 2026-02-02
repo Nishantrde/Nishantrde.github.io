@@ -152,5 +152,19 @@ body::before {
     z-index: 2;
 }
 
+.search-bar{
+    width: 50px;
+    height: 20px;
+    /* background-size: 30px 30px; */
+    position: fixed;
+    flex-direction: row;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+
+
 
 
