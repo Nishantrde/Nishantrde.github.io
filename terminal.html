@@ -22,6 +22,11 @@
         let cmds = new Set();
         let cmd_index = cmds.size - 1
         let ter_inp = document.getElementById("terminal-input")
+
+        window.addEventListener('click', function() {
+            ter_inp.focus();
+        });
+        
         ter_inp.addEventListener('keydown', function(event){
         const loc = document.getElementById('loc')
         const address = loc.textContent
