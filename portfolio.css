@@ -124,14 +124,14 @@ body::before {
 }
 
 .start-bnt{
-    width: 100%;
-    height: 50px;
-    left: 0;
+    width: 45px;
+    height: 45px;
+    left: 42.3%;
     bottom: 0;
     position: fixed;
     background-image: url("start_button.png");
     background-repeat: no-repeat;
-    background-size: 30px 30px;
+    background-size: 27px 27px;
     background-position: center;
     background-color: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -152,19 +152,40 @@ body::before {
     z-index: 2;
 }
 
-.search-bar{
-    width: 50px;
-    height: 20px;
-    /* background-size: 30px 30px; */
-    position: fixed;
-    flex-direction: row;
-    left: 0;
-    bottom: 0;
-    background-color: rgb(255, 255, 255);
-    z-index: 2;
+.start-bnt:hover {
+    background-color: rgba(255, 255, 255, 0.505);
 }
 
 
+.search-bar{
+    width: 200px;
+    height: 30px;
+    left: 45%;
+    bottom: 1.1%;
+    position: fixed;
+    background-image: url("glass.png");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: left;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: #fefcfc;
+    /* padding-top: 0px;  */
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.372);
+    border-radius: 50px;
+    border: 1px solid transparent;
+    line-height: 1;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    background-color: #fefcfc;
+}
 
 
 
