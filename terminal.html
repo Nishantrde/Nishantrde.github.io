@@ -27,8 +27,10 @@
                         console.log("Got It")
                         break;
                     case "whoami":
+                        const loc = document.getElementById('loc')
+                        const address = loc.textContent
                         const container = document.getElementById('op');
-                        container.insertAdjacentHTML('beforeend', '<span>Nishant Bhai</span>');
+                        container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
 
                 }
