@@ -1,37 +1,64 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="terminal.css">
+    <link rel="stylesheet" href="terminal.css">
     <title>Nishant's Terminal</title>
 </head>
+
 <body>
     <h1>Nishant's PowerShell <br>
         <br>
         Copyright (C) Nishantrde.github.io. All rights reserved. <br>
-        
+
     </h1>
     <div class="cli" id="cmd_ln">
         <span>PS Nishantrde.github.io>&nbsp;</span>
-        <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
+        <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..."
+            autocomplete="off" />
     </div>
-    
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/cheerio@1.2.0/dist/browser/index.min.js"></script>
 
-    <script type="module">  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cheerio@1.2.0/dist/browser/index.min.js"></script>
+
+    <script type="module">
         // import axios from "axios"
         let ter_inp = document.getElementById("terminal-input")
-        ter_inp.addEventListener('keydown', function(event){
-            if (event.key == 'Enter'){
-                switch(ter_inp.value){
+
+        async function scrapeBook() {
+            // Fetch the HTML from the page
+            const { data } = await axios.get("https://books.toscrape.com/");
+
+            // Load HTML into Cheerio
+            const $ = cheerio.load(data);
+
+            // Find the first book and extract its data
+            const firstBook = $("article.product_pod").first();
+
+            const title = firstBook.find("h3 a").attr("title");
+            const price = firstBook.find(".price_color").text();
+            const rating = firstBook.find(".star-rating").attr("class").split(" ")[1];
+
+            console.log({
+                title,
+                price,
+                rating,
+            });
+        }
+
+
+        ter_inp.addEventListener('keydown', function (event) {
+            if (event.key == 'Enter') {
+                switch (ter_inp.value) {
                     case "ls":
                         console.log("Got It")
-                        
+                        scrapeBook()
                 }
                 ter_inp.value = null
             }
         })
     </script>
 </body>
+
 </html>
