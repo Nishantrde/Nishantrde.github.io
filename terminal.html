@@ -23,7 +23,9 @@
         let cmd_index = cmds.size - 1
         let ter_inp = document.getElementById("terminal-input")
         ter_inp.addEventListener('keydown', function(event){
-
+        const loc = document.getElementById('loc')
+        const address = loc.textContent
+        const container = document.getElementById('op');
             if (event.key == 'Enter'){
                 
                 cmds.add(ter_inp.value)
@@ -32,16 +34,12 @@
                         console.log("Got It")
                         break;
                     case "whoami":
-                        const loc = document.getElementById('loc')
-                        const address = loc.textContent
-                        const container = document.getElementById('op');
+                        
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
-                    finally:
-                        const loc = document.getElementById('loc')
-                        const address = loc.textContent
-                        const container = document.getElementById('op');
-                        container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
+                    default:
+                        
+                        container.insertAdjacentHTML('beforeend', `<div>${address} ${ter_inp.value}</div><div>${ter_inp.value}: command not found</div><br>`);
                         
 
                 }
