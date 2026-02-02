@@ -15,7 +15,7 @@
 
     </div>
     <div class="cli" id="cmd_ln">
-        <span>PS Nishantrde.github.io>&nbsp;</span>
+        <span id="loc">PS Nishantrde.github.io>&nbsp;</span>
         <input id="terminal-input" class="terminal-input" type="text" placeholder="Type a command..." autocomplete="off" />
     </div>
     <script type="module">  
@@ -27,10 +27,8 @@
                         console.log("Got It")
                         break;
                     case "whoami":
-                        const op = document.createElement('span')
-                        op.textContent = 'Nishant Bhai'
                         const container = document.getElementById('op');
-                        container.appendChild(op)
+                        container.insertAdjacentHTML('beforeend', '<span>Nishant Bhai</span>');
                         break;
 
                 }
