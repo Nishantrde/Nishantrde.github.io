@@ -32,8 +32,9 @@
         const address = loc.textContent
         const container = document.getElementById('op');
             if (event.key == 'Enter'){
-                
-                cmds.add(ter_inp.value)
+                if(ter_inp.value != ""){
+                    cmds.add(ter_inp.value)
+                }
                 switch(ter_inp.value){
                     case "ls":
                         console.log("Got It")
