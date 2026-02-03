@@ -10,6 +10,12 @@ body {
     gap: 5px;
 }
 
+:root {
+    --wallpaper: url("wallpaper.jpg");
+}
+
+
+
 body::before {
     content: "";
     position: fixed;
@@ -17,7 +23,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("wallpaper.jpg");
+    background-image: var(--wallpaper);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
