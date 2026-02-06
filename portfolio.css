@@ -227,5 +227,17 @@ body::before {
     background-color: rgba(238, 237, 237, 0.505);
 }
 
+.list{
+    width: 30%;
+    height: 63%;
+    top: 30%;
+    left: 36%;
+    background-color: #f1efefae;
+    position:fixed;
+    border-radius: 8.5px;
+
+}
+
+
 
 
