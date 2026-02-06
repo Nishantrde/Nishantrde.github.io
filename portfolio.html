@@ -44,8 +44,11 @@ const wallpapers = [
 ];
      document.documentElement.style.setProperty('--wallpaper', `url("${wallpapers[randN]}")`)
      start_btn.addEventListener('click', function(event){
-          container.insertAdjacentHTML('beforeend', `<div class="list"></div>`);
-
+          if(container.innerHTML === ''){
+               container.insertAdjacentHTML('beforeend', `<div class="list"></div>`);
+          } else {
+               container.innerHTML = '';
+          }
      })
    </script>
 </body>
