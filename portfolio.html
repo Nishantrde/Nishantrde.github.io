@@ -24,6 +24,7 @@
    </div>
    <script>
     const randN = Math.floor(Math.random() * 11);
+    let start_bnt = document.getElementById("start-bnt")
 
 const wallpapers = [
     '0.jpg',
@@ -39,6 +40,9 @@ const wallpapers = [
     '10.jpg'
 ];
      document.documentElement.style.setProperty('--wallpaper', `url("${wallpapers[randN]}")`)
+     window.addEventListener('click', function(){
+          
+     })
    </script>
 </body>
 </html>
