@@ -26,8 +26,8 @@
    </div>
    <script>
     const randN = Math.floor(Math.random() * 11);
-    let start_btn = document.getElementById("start-btn")
-    let search_bar = document.getElementById("search-bar")
+    const start_btn = document.getElementById("start-btn")
+    const search_bar = document.getElementById("search-bar")
     const container = document.getElementById("list")
 
 const wallpapers = [
@@ -44,20 +44,27 @@ const wallpapers = [
     '10.jpg'
 ];
      document.documentElement.style.setProperty('--wallpaper', `url("${wallpapers[randN]}")`)
-     start_btn.addEventListener('click', function(event){
-          if(container.innerHTML === ''){
+
+     function toggleList(){
+          let panel = container.querySelector('.list');
+          if(!panel){
                container.insertAdjacentHTML('beforeend', `<div class="list"></div>`);
-          } else {
-               container.innerHTML = '';
+               return;
           }
-     })
-     search_bar.addEventListener('click', function(event){
-          if(container.innerHTML === ''){
-               container.insertAdjacentHTML('beforeend', `<div class="list"></div>`);
-          } else {
-               container.innerHTML = '';
-          }
-     })
+          if (panel.classList.contains('list-hide')) return
+
+          panel.classList.add('list-hide');
+          panel.remove();
+          panel.addEventListener('animationend', () =>{
+               panel.remove();
+          },{once:true}
+     )
+
+
+     }
+
+     start_btn.addEventListener('click', toggleList)
+     search_bar.addEventListener('click', toggleList)
    </script>
 </body>
 </html>

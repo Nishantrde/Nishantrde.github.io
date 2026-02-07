@@ -233,18 +233,27 @@ body::before {
     background-color: #dededef8;
     position:fixed;
     border-radius: 8.5px;
-    animation: list-show 200ms ease-out both;
+    animation: list-in 200ms ease-out both;
 
 }
+.list-hide{
+    animation: list-out 200ms ease-out both;
+}
 
-@keyframes list-show {
+@keyframes list-in {
     0% {
     transform: translateY(8px);
-    /* opacity: 0; */
   }
   100% {
     transform: translateY(0);
-    /* opacity: 1; */
+  }
+}
+@keyframes list-out {
+    0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(8px);
   }
 }
 
