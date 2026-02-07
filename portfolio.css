@@ -14,8 +14,6 @@ body {
     --wallpaper: url("wallpaper.jpg");
 }
 
-
-
 body::before {
     content: "";
     position: fixed;
@@ -235,9 +233,19 @@ body::before {
     background-color: #dededef8;
     position:fixed;
     border-radius: 8.5px;
+    animation: list-show 300ms ease-out both;
 
 }
 
-
+@keyframes list-show {
+    0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 
