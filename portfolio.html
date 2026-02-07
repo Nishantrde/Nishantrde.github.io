@@ -22,11 +22,12 @@
    <div class="taskbar"></div>
    <button class="start-btn" id="start-btn"></button>
    
-   <input class="search-bar" placeholder="Seach"></input>
+   <input class="search-bar" id="search-bar" placeholder="Seach"></input>
    </div>
    <script>
     const randN = Math.floor(Math.random() * 11);
     let start_btn = document.getElementById("start-btn")
+    let search_bar = document.getElementById("search-bar")
     const container = document.getElementById("list")
 
 const wallpapers = [
@@ -44,6 +45,13 @@ const wallpapers = [
 ];
      document.documentElement.style.setProperty('--wallpaper', `url("${wallpapers[randN]}")`)
      start_btn.addEventListener('click', function(event){
+          if(container.innerHTML === ''){
+               container.insertAdjacentHTML('beforeend', `<div class="list"></div>`);
+          } else {
+               container.innerHTML = '';
+          }
+     })
+     search_bar.addEventListener('click', function(event){
           if(container.innerHTML === ''){
                container.insertAdjacentHTML('beforeend', `<div class="list"></div>`);
           } else {
