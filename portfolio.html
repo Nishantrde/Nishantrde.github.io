@@ -54,7 +54,7 @@ const wallpapers = [
           if (panel.classList.contains('list-hide')) return
 
           panel.classList.add('list-hide');
-          panel.remove();
+          // panel.remove();
           panel.addEventListener('animationend', () =>{
                panel.remove();
           },{once:true}

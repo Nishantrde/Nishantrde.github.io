@@ -242,7 +242,7 @@ body::before {
 
 @keyframes list-in {
     0% {
-    transform: translateY(8px);
+    transform: translateY(800px);
   }
   100% {
     transform: translateY(0);
@@ -253,7 +253,7 @@ body::before {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(8px);
+    transform: translateY(800px);
   }
 }
 
