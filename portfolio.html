@@ -23,13 +23,14 @@
    <button class="start-btn" id="start-btn"></button>
    
    <input class="search-bar" id="search-bar" placeholder="Seach"></input>
-   <div id="t&d" ></div>
+   <div id="tNd" class="tNd"><div>20:17</div><div>08-02-2026</div></div>
    </div>
    <script>
     const randN = Math.floor(Math.random() * 11);
     const start_btn = document.getElementById("start-btn")
     const search_bar = document.getElementById("search-bar")
     const container = document.getElementById("list")
+    const TnD = document.getElementById("tNd")
 
 const wallpapers = [
     '0.jpg',
@@ -64,13 +65,18 @@ const wallpapers = [
 
      start_btn.addEventListener('click', toggleList)
      search_bar.addEventListener('click', toggleList)
+     let now = new Date();
+     // function updateTime(){
+          
+     //      let dd = String(now.getDate()).padStart(2, '0');
+     //      let mm = String(now.getMonth() + 1).padStart(2, '0');
+     //      let yy = String(now.getFullYear()).slice(-2);
+     //      let date = `${dd}-${mm}-${yy}`;
+          
+     // }
 
-     const now = new Date();
-     const dd = String(now.getDate()).padStart(2, '0');
-     const mm = String(now.getMonth() + 1).padStart(2, '0');
-     const yy = String(now.getFullYear()).slice(-2);
-     const date = `${dd}-${mm}-${yy}`;
-     console.log(now, now.toLocaleTimeString(), date);
+
+     console.log(now);
 
      // while(true){
      //      const now = new Date();
