@@ -60,14 +60,22 @@ const wallpapers = [
                panel.remove();
           },{once:true}
      )
-
-
      }
 
      start_btn.addEventListener('click', toggleList)
      search_bar.addEventListener('click', toggleList)
+
      const now = new Date();
-     console.log(now);
+     const dd = String(now.getDate()).padStart(2, '0');
+     const mm = String(now.getMonth() + 1).padStart(2, '0');
+     const yy = String(now.getFullYear()).slice(-2);
+     const date = `${dd}-${mm}-${yy}`;
+     console.log(now, now.toLocaleTimeString(), date);
+
+     // while(true){
+     //      const now = new Date();
+     //      console.log(now);
+     // }
 
    </script>
 </body>
