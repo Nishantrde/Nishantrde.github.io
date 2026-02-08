@@ -250,6 +250,7 @@ body::before {
     font-size: smaller;
     z-index: 3;
     text-align: right;
+    font-family: "Segoe UI", sans-serif;
 }
 
 
