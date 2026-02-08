@@ -244,12 +244,12 @@ body::before {
     width: 30%;
     height: 63%;
     top: 96%;
-    left: 95%;
+    left: 68%;
     position:fixed;
     color: rgb(4, 4, 4);
     font-size: smaller;
     z-index: 3;
-    text
+    text-align: right;
 }
 
 
