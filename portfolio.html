@@ -69,14 +69,20 @@ const wallpapers = [
      search_bar.addEventListener('click', toggleList)
      let now = new Date();
      function updateTime(){
-          let time = now.toLocaleTimeString();
+          let time = now.toLocaleTimeString([], {
+               hour: '2-digit',
+               minute: '2-digit',
+               hour12: false
+          });
           let dd = String(now.getDate()).padStart(2, '0');
           let mm = String(now.getMonth() + 1).padStart(2, '0');
           let yy = String(now.getFullYear()).slice(-2);
           let date = `${dd}-${mm}-${yy}`;
-          time_id.value = time;
-          date_id.value = date;
+          time_id.textContent = time;
+          date_id.textContent = date;
      }
+     updateTime();
+     setInterval(updateTime, 1000);
 
      console.log(now);
 
