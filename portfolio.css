@@ -242,7 +242,7 @@ body::before {
 }
 
 .tNd{
-    width: 30%;
+    width: 3%;
     height: 63%;
     top: 96%;
     left: 69%;
@@ -253,6 +253,8 @@ body::before {
     text-align: right;
     font-family: "Segoe UI", sans-serif;
     cursor: pointer;
+    border-radius: 8.5px;
+
 }
 
 .tNd:hover{
