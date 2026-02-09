@@ -234,6 +234,7 @@ body::before {
     position:fixed;
     border-radius: 8.5px;
     animation: list-in 200ms ease-out both;
+    cursor: pointer;
 
 }
 .list-hide{
@@ -251,6 +252,11 @@ body::before {
     z-index: 3;
     text-align: right;
     font-family: "Segoe UI", sans-serif;
+    cursor: pointer;
+}
+
+.tNd:hover{
+    background-color: rgba(238, 237, 237, 0.505);
 }
 
 
