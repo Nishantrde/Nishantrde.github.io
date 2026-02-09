@@ -67,8 +67,8 @@ const wallpapers = [
 
      start_btn.addEventListener('click', toggleList)
      search_bar.addEventListener('click', toggleList)
-     let now = new Date();
      function updateTime(){
+          const now = new Date();
           let time = now.toLocaleTimeString([], {
                hour: '2-digit',
                minute: '2-digit',
@@ -82,9 +82,9 @@ const wallpapers = [
           date_id.textContent = date;
      }
      updateTime();
-     setInterval(updateTime, 1000);
+     setInterval(updateTime, 100);
 
-     console.log(now);
+     console.log(new Date());
 
      // while(true){
      //      const now = new Date();
