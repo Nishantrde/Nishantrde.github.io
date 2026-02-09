@@ -242,10 +242,10 @@ body::before {
 }
 
 .tNd{
-    width: 3%;
-    height: 63%;
+    width: 4%;
+    height: 4%;
     top: 96%;
-    left: 69%;
+    left: 95%;
     position:fixed;
     color: rgb(4, 4, 4);
     font-size: smaller;
@@ -253,7 +253,7 @@ body::before {
     text-align: right;
     font-family: "Segoe UI", sans-serif;
     cursor: pointer;
-    border-radius: 8.5px;
+    border-radius: 3.5px;
 
 }
 
