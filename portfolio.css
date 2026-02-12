@@ -170,6 +170,12 @@ body::before {
     background-color: rgba(255, 255, 255, 0.222);
 }
 
+.prj1:hover {
+    background-color: rgba(255, 255, 255, 0.222);
+}
+
+
+
 
 .taskbar {
     width: 100%;
