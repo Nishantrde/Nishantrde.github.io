@@ -187,10 +187,10 @@ body::before {
 }
 
 .start-btn{
-    width: 45px;
-    height: 45px;
+    width: 39px;
+    height: 39px;
     left: 42.3%;
-    bottom: 0;
+    bottom: .5%;
     position: fixed;
     background-image: url("start_button.png");
     background-repeat: no-repeat;
