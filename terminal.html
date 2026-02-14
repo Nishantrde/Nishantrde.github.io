@@ -46,21 +46,23 @@
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
                     case "ruthere":
+                        let msg = "did'nt get";
                         fetch('https://git-repo-dusky-psi.vercel.app/api/gotit', {
-                            method: 'GET',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
+                            // method: 'GET',
+                            // headers: {
+                            //     'Content-Type': 'application/json'
+                            // },
+                            // body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
                         })
                             .then(responce => responce.text())
                             .then(data => {
+                                msg = data
                                 console.log('GET response', data);
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>${data.message}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
                             });
-                        container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
                     default:
                         container.insertAdjacentHTML('beforeend', `<div>${address} ${ter_inp.value}</div><div>${ter_inp.value}: command not found</div><br>`);
