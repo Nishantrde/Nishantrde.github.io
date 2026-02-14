@@ -47,7 +47,7 @@
                         break;
                     case "ruthere":
                         fetch('')
-                        .then(responce => responce.json())
+                        .then(responce => responce.text())
                         .then(data =>{
                             console.log('GET response', data);
                         })
