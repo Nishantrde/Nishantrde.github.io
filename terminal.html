@@ -72,10 +72,10 @@
                         })
                             .then(responce => responce.text())
                             .then(data => {
-                               
-                                console.log('POST response', data);
+                               let msg = JSON.parse(data)
+                                console.log('POST response', msg.tree[0].path);
                                 console.log(typeof data, data);
-                                container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>data here</div><br>`);
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>${msg}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
