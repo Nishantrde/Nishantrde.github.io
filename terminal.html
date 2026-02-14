@@ -46,7 +46,7 @@
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
                     case "ruthere":
-                        fetch('')
+                        fetch('https://git-repo-dusky-psi.vercel.app/api/gotit')
                         .then(responce => responce.text())
                         .then(data =>{
                             console.log('GET response', data);
