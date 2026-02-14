@@ -46,6 +46,14 @@
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
                     case "ruthere":
+                        fetch('')
+                        .then(responce => responce.json())
+                        .then(data =>{
+                            console.log('GET response', data);
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
                     default:
