@@ -73,8 +73,14 @@
                             .then(responce => responce.text())
                             .then(data => {
                                let msg = JSON.parse(data)
-                                console.log('POST response', msg.tree[0].path);
+                                let tree = msg.tree 
+                                console.log('POST response', tree);     
                                 console.log(typeof data, data);
+                                let content = ""
+                                for(let i = 0; i<tree.length; i++){
+                                    content += tree[i].path + "<br>"
+                                }
+                                console.log(content)
                                 container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>${msg}</div><br>`);
                             })
                             .catch(error => {
