@@ -64,11 +64,11 @@
                         break;
                     case "ls":
                         fetch('https://git-repo-dusky-psi.vercel.app/api/ls', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
+                            // method: 'POST',
+                            // headers: {
+                            //     'Content-Type': 'application/json'
+                            // },
+                            // body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
                         })
                             .then(responce => responce.text())
                             .then(data => {
