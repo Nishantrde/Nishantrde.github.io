@@ -56,9 +56,10 @@
                         })
                             .then(responce => responce.text())
                             .then(data => {
-                                msg = data
+                                msg = JSON.parse(data)
                                 console.log('GET response', data);
-                                container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>${data.message}</div><br>`);
+                                console.log(typeof data, data);
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>${msg.message}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
