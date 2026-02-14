@@ -39,9 +39,6 @@
                     cmds.add(ter_inp.value)
                 }
                 switch (ter_inp.value) {
-                    case "ls":
-                        console.log("Got It")
-                        break;
                     case "whoami":
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
@@ -65,6 +62,26 @@
                                 console.error('Error:', error);
                             });
                         break;
+                    case "ls":
+                        fetch('https://git-repo-dusky-psi.vercel.app/api/gotit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
+                        })
+                            .then(responce => responce.text())
+                            .then(data => {
+                               
+                                console.log('POST response', data);
+                                console.log(typeof data, data);
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ruthere</div><div>data here</div><br>`);
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                            break;
+
                     default:
                         container.insertAdjacentHTML('beforeend', `<div>${address} ${ter_inp.value}</div><div>${ter_inp.value}: command not found</div><br>`);
                 }
