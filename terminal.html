@@ -89,17 +89,20 @@
                             break;
                     case "cat":
                         console.log("Here ",ter_inp.value.split(" "))
+                        let file = ter_inp.value.split(" ")
+                        let cmd  = ter_inp.value
                         fetch('https://git-repo-dusky-psi.vercel.app/api/cat', {
                             method: 'GET',
                             headers: {
-                                'cmd': 'your-command-here'
+                                'cmd': file[1]
                             },
                             // body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
                         })
                             .then(responce => responce.text())
                             .then(data => {
                                let msg = JSON.parse(data)
-                                container.insertAdjacentHTML('beforeend', `<div>${address} cat</div><div>${data}</div><br>`);
+                               console.log(ter_inp.value)
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ${cmd}</div><div>${data}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
