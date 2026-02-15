@@ -72,12 +72,12 @@
                         })
                             .then(responce => responce.text())
                             .then(data => {
-                               let msg = JSON.parse(data)
-                                let tree = msg.tree 
-                                console.log('POST response', tree);     
+                                let msg = JSON.parse(data)
+                                let tree = msg.tree
+                                console.log('POST response', tree);
                                 console.log(typeof data, data);
                                 let content = ""
-                                for(let i = 0; i<tree.length; i++){
+                                for (let i = 0; i < tree.length; i++) {
                                     content += tree[i].path + "<br>"
                                 }
                                 console.log(content)
@@ -86,11 +86,11 @@
                             .catch(error => {
                                 console.error('Error:', error);
                             });
-                            break;
+                        break;
                     case "cat":
-                        console.log("Here ",ter_inp.value.split(" "))
+                        console.log("Here ", ter_inp.value.split(" "))
                         let file = ter_inp.value.split(" ")
-                        let cmd  = ter_inp.value
+                        let cmd = ter_inp.value
                         fetch('https://git-repo-dusky-psi.vercel.app/api/cat', {
                             method: 'GET',
                             headers: {
@@ -100,14 +100,15 @@
                         })
                             .then(responce => responce.text())
                             .then(data => {
-                               let msg = JSON.parse(data)
-                               console.log(ter_inp.value)
-                                container.insertAdjacentHTML('beforeend', `<div>${address} ${cmd}</div><div>${data}</div><br>`);
+                                let msg = JSON.parse(data)
+                                console.log(ter_inp.value)
+                                let escapedData = data.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ${cmd}</div><div>${escapedData}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
                             });
-                            break;
+                        break;
 
                     default:
                         container.insertAdjacentHTML('beforeend', `<div>${address} ${ter_inp.value}</div><div>${ter_inp.value}: command not found</div><br>`);
@@ -135,6 +136,3 @@
 </body>
 
 </html>
-
-
-
