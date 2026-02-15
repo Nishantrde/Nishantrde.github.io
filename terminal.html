@@ -91,22 +91,16 @@
                         fetch('https://git-repo-dusky-psi.vercel.app/api/ls', {
                             method: 'GET',
                             headers: {
-                                'Content-Type': 'application/json'
+                                'cmd': 'your-command-here'
                             },
                             // body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
                         })
                             .then(responce => responce.text())
                             .then(data => {
                                let msg = JSON.parse(data)
-                                let tree = msg.tree 
-                                console.log('POST response', tree);     
-                                console.log(typeof data, data);
-                                let content = ""
-                                for(let i = 0; i<tree.length; i++){
-                                    content += tree[i].path + "<br>"
-                                }
-                                console.log(content)
-                                container.insertAdjacentHTML('beforeend', `<div>${address} ls</div><div>${content}</div><br>`);
+                                
+                                
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ls</div><div>${data}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
