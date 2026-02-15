@@ -38,7 +38,7 @@
                 if (ter_inp.value != "") {
                     cmds.add(ter_inp.value)
                 }
-                switch (ter_inp.value) {
+                switch (ter_inp.value.split(" ")[0]) {
                     case "whoami":
                         container.insertAdjacentHTML('beforeend', `<div>${address} whoami</div><div>Nishant Bhai</div><br>`);
                         break;
@@ -88,6 +88,7 @@
                             });
                             break;
                     case "cat":
+                        console.log("Here ",ter_inp.value.split(" "))
                         fetch('https://git-repo-dusky-psi.vercel.app/api/cat', {
                             method: 'GET',
                             headers: {
@@ -98,9 +99,7 @@
                             .then(responce => responce.text())
                             .then(data => {
                                let msg = JSON.parse(data)
-                                
-                                
-                                container.insertAdjacentHTML('beforeend', `<div>${address} ls</div><div>${data}</div><br>`);
+                                container.insertAdjacentHTML('beforeend', `<div>${address} cat</div><div>${data}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
