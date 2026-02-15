@@ -102,8 +102,9 @@
                             .then(data => {
                                 let msg = JSON.parse(data)
                                 console.log(ter_inp.value)
-                                let escapedData = data.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                                container.insertAdjacentHTML('beforeend', `<div>${address} ${cmd}</div><div>${escapedData}</div><br>`);
+                                console.log()
+                                let escapedContent = msg.content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ${cmd}</div><div>${escapedContent}</div><br>`);
                             })
                             .catch(error => {
                                 console.error('Error:', error);
