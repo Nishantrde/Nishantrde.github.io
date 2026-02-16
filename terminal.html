@@ -87,6 +87,31 @@
                                 console.error('Error:', error);
                             });
                         break;
+                    case "l":
+                        fetch('https://git-repo-dusky-psi.vercel.app/api/ls', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ message: "Hello from Nishant's terminal!" })
+                        })
+                            .then(responce => responce.text())
+                            .then(data => {
+                                let msg = JSON.parse(data)
+                                let tree = msg.tree
+                                console.log('POST response', tree);
+                                console.log(typeof data, data);
+                                let content = ""
+                                for (let i = 0; i < tree.length; i++) {
+                                    content += tree[i].path + "<br>"
+                                }
+                                console.log(content)
+                                container.insertAdjacentHTML('beforeend', `<div>${address} ls</div><div>${content}</div><br>`);
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                        break;
                     case "cat":
                         console.log("Here ", ter_inp.value.split(" "))
                         let file = ter_inp.value.split(" ")
